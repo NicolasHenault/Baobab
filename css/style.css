@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Sedgwick+Ave');
+*{
+    box-sizing: border-box;
+}
+html,body{
+	width: 100%;	    
+    font-family: 'Sedgwick Ave', cursive;    
+}
+p, nav{
+    font-family: 'Roboto Condensed', sans-serif; 
+    
+}
+body{
+    background-image: url(../img/fond-papier.jpg);
+    margin: 0;
+    padding: 0;
+    color: white;
+    
+}
+#container{
+    background-color: gray;
+    width: 960px;
+    margin: auto;    
+}
+header{
+    margin: 30px;
+}
+
+h1, h4, h2, h3{
+  font-weight: normal;  
+}
+h1{
+    font-size: 2em;    
+}
+h2{
+    font-size: 1.8em;
+}
+h3{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.4em;
+}
+header{
+    text-align: center;
+}
+header img{
+    max-width: 200px;
+    margin-top: 15px;
+    margin-bottom: -35px;
+}
+
+
+/*La navigation*/
+#nav_normale ul li {		
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;    
+    list-style-type: none;
+        
+}
+#nav_normale ul li a{
+    text-decoration: none;
+    color: white;
+}
+#nav_normale ul{
+    display: flex;   
+    justify-content: space-around;    
+}
+
+#nav_normale {
+	background-color: black;
+	height: 50px;
+    border-radius: 5px;
+}
+#nav_mobile {
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+.police_nav {	
+	line-height: 50px;
+	font-size: 1.2em;
+}
+#nav_mobile_content a {
+	display: block;
+	text-decoration: none;
+	background-color: black;
+	padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    width: 200px;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+#nav_mobile:target #nav_mobile_burger {
+	display: none;	
+}
+#nav_mobile:not(target) #nav_mobile_burger {
+	display: block;
+}
+#nav_mobile:not(target) #nav_mobile_content {
+	display: none;
+}
+#nav_mobile:target #nav_mobile_content {
+	display: block;
+}
+#nav_mobile{
+    display: none;
+}
+/*La section cafés d'exception*/
+
+#exception img{
+    float: left;
+    border-radius: 100%;
+    margin: 30px;
+    width: 30%;
+}
+#grains{    
+    text-align: left;
+    padding: 15px;
+    margin: 15px;
+}
+
+/*La section 3 photos*/
+
+#section2{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+article{
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px;
+}
+article h3{
+    text-align: center;
+}
+
+/*La section torrefaction*/
+
+#torrefaction{
+    background-image: url("../img/torrefaction-cafe.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 500px; 
+    margin: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#torrefaction p{
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 1.8em;    
+    padding: 120px;
+    text-align: right;
+}
+
+/* la section nos cafés*/
+
+#nos_cafes{
+    margin: 30px;     
+}
+
+#sachets img{
+    width: 20%;
+    margin: 20px;
+}
+
+/*la section producteurs*/
+
+#producteurs{
+    margin: 30px;    
+}
+#producteurs img{
+    float: right;
+    width: 50%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/*La section phylosophie*/
+
+
+#phylosophie{
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("../img/grains-couleur.jpg");
+    background-position: center;
+    background-size: cover;    
+    height: 500px; 
+    margin: 30px;
+    border-radius: 5px;
+    padding-left: 40px;
+    padding-top: 20px;    
+}
+#phylosophie h4{
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 1.4em;    
+}
+#philo{
+     width: 50%;      
+}
+
+
+/* Le footer*/
+
+footer{
+    text-align: center;
+    background-color: black;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+footer img{
+    max-width: 150px;    
+}
+
+footer a{
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+
+
+
+/*Les media queries*/
+
+
+@media only screen and (max-width: 64em)
+{
+    #container{    
+    width: 100%;       
+    }
+    header{
+    margin: 0px;
+    }
+    #nav_normale{
+    display: none;
+    }
+    #nav_mobile{
+        display: block;
+    }
+    #exception img{    
+    border-radius: 0%;
+    
+    }
+    #section2{    
+    flex-direction: column;    
+    }
+    #torrefaction p{    
+    text-align: center;    
+    } 
+    #sachets img{
+    width: auto;
+    margin: auto;
+    }
+    #producteurs img{    
+    width: 100%;    
+    }
+    #philo{
+     width: auto;      
+}
+}
